@@ -1,0 +1,127 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="search">
+        <view class="search_left search_item" bindtap="switchCityOnClickListener">
+            <text>{{location}}-{{county}}</text>
+            <image src="../../images/location_buttom_city.png"></image>
+        </view>
+        <view class="search_center search_item">
+            <image src="../../images/search.png"></image>
+            <input placeholder="请输入内容" placeholder-class="search_placeholder" />
+        </view>
+        <view class="search_right search_item">
+            <image src="../../images/lighting.png"></image>
+        </view>
+    </view>
+    <view class="content">
+        <scroll-view scroll-y="true" enable-back-to-top="true" style="height: 100vh;">
+            <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+                circular="{{circular}}">
+                <block wx:for="{{imgUrls}}">
+                    <swiper-item>
+                        <image src="{{item}}" style="width:{{imageWidth}}px;"></image>
+                    </swiper-item>
+                </block>
+            </swiper>
+            <view class="operation">
+                <view class="operation-btn search_item">
+                    <image src="http://img.mp.itc.cn/upload/20170324/663c85eae74f4320a3e382f03af76d52_th.jpg"></image>
+                    <text>硬装软装</text>
+                </view>
+                <view class="operation-btn search_item">
+                    <image src="http://img.mp.itc.cn/upload/20170324/663c85eae74f4320a3e382f03af76d52_th.jpg"></image>
+                    <text>主材辅材</text>
+                </view>
+                <view class="operation-btn search_item">
+                    <image src="http://img.mp.itc.cn/upload/20170324/663c85eae74f4320a3e382f03af76d52_th.jpg"></image>
+                    <text>家具电器</text>
+                </view>
+                <view class="operation-btn search_item">
+                    <image src="http://img.mp.itc.cn/upload/20170324/663c85eae74f4320a3e382f03af76d52_th.jpg"></image>
+                    <text>配套/服务</text>
+                </view>
+                <view class="operation-btn search_item">
+                    <image src="http://img.mp.itc.cn/upload/20170324/663c85eae74f4320a3e382f03af76d52_th.jpg"></image>
+                    <text>家居生活</text>
+                </view>
+            </view>
+            <view class="swiper-tab">
+                <view class="swiper-tab-list {{currentTab==0 ? 'swiper-tab-active' : ''}}" data-current="0" bindtap="tabNav">案例多</view>
+                <view class="swiper-tab-list {{currentTab==1 ? 'swiper-tab-active' : ''}}" data-current="1" bindtap="tabNav">浏览多</view>
+                <view class="swiper-tab-list {{currentTab==2 ? 'swiper-tab-active' : ''}}" data-current="2" bindtap="tabNav">商品多</view>
+            </view>
+            <swiper current="{{currentTab}}" duration="1000" bindchange="tabChange" style="height:100vh;">
+                <swiper-item>
+                    <scroll-view scroll-y="true">
+                        <block wx:for="{{caseArrays}}" wx:for-index="idx">
+                            <view class="case-item">
+                                <view class="case-item-pic">
+                                    <image src="http://img.mp.itc.cn/upload/20170324/663c85eae74f4320a3e382f03af76d52_th.jpg"></image>
+                                </view>
+                                <view class="case-item-content">
+                                    <view class="case-item-content-top">
+                                        <text>{{item.companyTitle}}</text>
+                                    </view>
+                                    <view class="case-item-content-center">
+                                        <text>{{item.price}}</text>
+                                    </view>
+                                    <view class="case-item-content-buttom">
+                                        <text>{{item.num}}</text>
+                                    </view>
+                                </view>
+
+                            </view>
+                            <view wx:if="{{idx!=caseArrays.length-1}}" style="width: 100%;height: 1px;background: #f3f3f3;"></view>
+                        </block>
+                    </scroll-view>
+                </swiper-item>
+                <swiper-item>
+                    <scroll-view scroll-y="true">
+                        <block wx:for="{{caseArrays}}" wx:for-index="idx">
+                            <view class="case-item">
+                                <view class="case-item-pic">
+                                    <image src="http://img.mp.itc.cn/upload/20170324/663c85eae74f4320a3e382f03af76d52_th.jpg"></image>
+                                </view>
+                                <view class="case-item-content">
+                                    <view class="case-item-content-top">
+                                        <text>{{item.companyTitle}}</text>
+                                    </view>
+                                    <view class="case-item-content-center">
+                                        <text>{{item.price}}</text>
+                                    </view>
+                                    <view class="case-item-content-buttom">
+                                        <text>{{item.num}}</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view wx:if="{{idx!=caseArrays.length-1}}" style="width: 100%;height: 1px;background: #f3f3f3;"></view>
+                        </block>
+                    </scroll-view>
+                </swiper-item>
+                <swiper-item>
+                    <scroll-view scroll-y="true">
+                        <block wx:for="{{caseArrays}}" wx:for-index="idx">
+                            <view class="case-item">
+                                <view class="case-item-pic">
+                                    <image src="http://img.mp.itc.cn/upload/20170324/663c85eae74f4320a3e382f03af76d52_th.jpg"></image>
+                                </view>
+                                <view class="case-item-content">
+                                    <view class="case-item-content-top">
+                                        <text>{{item.companyTitle}}</text>
+                                    </view>
+                                    <view class="case-item-content-center">
+                                        <text>{{item.price}}</text>
+                                    </view>
+                                    <view class="case-item-content-buttom">
+                                        <text>{{item.num}}</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view wx:if="{{idx!=caseArrays.length-1}}" style="width: 100%;height: 1px;background: #f3f3f3;"></view>
+                        </block>
+                    </scroll-view>
+                </swiper-item>
+            </swiper>
+        </scroll-view>
+    </view>
+</view>

@@ -1,0 +1,17 @@
+<import src="../common/personal/personal" />
+<view class="container">
+    <view  class="userinfo" bindtap='toPersonalData'>
+        <view class="cell-left">
+            <view class="userinfo-avatar">
+                <image wx:if='{{userInfo.avatarUrl}}' src="{{userInfo.avatarUrl}}" />
+            </view>
+			<button class="userinfo-nickname" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">{{userInfo.nickName || "未登录"}}</button>
+        </view>
+        <view class="arrow-right"> </view>
+    </view>
+    <block class="row-list" wx:for='{{menu}}' >
+		<view bindtap='itemclick' data-index='{{index}}'>
+			<template is='personalCenter-item' data='{{item}}'/>
+		</view>
+    </block>
+</view>

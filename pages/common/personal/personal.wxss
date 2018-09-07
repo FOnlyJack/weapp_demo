@@ -1,0 +1,37 @@
+.personalCenter-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  color: #496069;
+  border-bottom: 0.5px solid #ddd;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.personalCenter-item:last-child {
+  border:none;
+}
+.personalCenter-item .row-left,
+.personalCenter-item .row-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.personalCenter-item .row-icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 1em;
+}
+.row-right .row-subtitle {
+  color: #aaa;
+  margin-right: 0.5em;
+}
+.arrow-right{
+	width: 20rpx;
+	height: 20rpx;
+	border-right: 1px solid #aaa;
+	border-top: 1px solid #aaa;
+	transform: rotate(45deg);
+	text-align: end;
+}

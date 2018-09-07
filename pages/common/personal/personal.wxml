@@ -1,0 +1,12 @@
+<template name="personalCenter-item">
+    <view class="personalCenter-item"  bindtap="bindUserCenterOnClick">
+        <view class="row-left">
+            <image class="row-icon" src="{{item.rowIconPath}}" mode="widthFix"></image>
+            <text>{{item.rowRightTitle}}</text>
+        </view>
+        <view class="row-right">
+            <text class='row-subtitle'>{{item.subtitle||""}}</text>
+            <view class='arrow-right'></view>
+        </view>
+    </view>
+</template>

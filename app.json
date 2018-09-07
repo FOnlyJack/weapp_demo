@@ -1,0 +1,47 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/switchcity/switchcity",
+		"pages/usercenter/usercenter"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#2A8CE5",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "list": [{
+            "pagePath": "pages/index/index",
+            "text": "",
+            "iconPath": "images/discovery.png",
+            "selectedIconPath": "images/discovery_focus.png"
+        }, {
+            "pagePath": "pages/index/index",
+            "text": "",
+            "iconPath": "images/discovery.png",
+            "selectedIconPath": "images/discovery_focus.png"
+        }, {
+            "pagePath": "pages/index/index",
+            "text": "",
+            "iconPath": "images/discovery.png",
+            "selectedIconPath": "images/discovery_focus.png"
+        }, {
+            "pagePath": "pages/index/index",
+            "text": "",
+            "iconPath": "images/discovery.png",
+            "selectedIconPath": "images/discovery_focus.png"
+        }, {
+            "pagePath": "pages/usercenter/usercenter",
+            "text": "",
+            "iconPath": "images/discovery.png",
+            "selectedIconPath": "images/discovery_focus.png"
+        }]
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    },
+    "debug": true
+}
